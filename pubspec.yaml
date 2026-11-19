@@ -1,0 +1,8 @@
+name: ReabDay
+description: My Dart project
+
+environment:
+  sdk: ^3.13.4
+
+dev_dependencies:
+  test: ^1.25.0
