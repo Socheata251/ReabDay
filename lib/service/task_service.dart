@@ -27,7 +27,7 @@ class TaskService {
   Task createTask({required String goalId,required String title,DateTime? deadline,Priority priority = Priority.low,
   }) {
    
-    if (title.isEmpty) {
+    if (title.trim().isEmpty) {
       throw Exception('Task title cannot be empty');
     }
     
@@ -80,7 +80,7 @@ class TaskService {
   }) {
     final task = getTask(taskId);
     if (title != null) {
-      if (title.isEmpty) {
+      if (title.trim().isEmpty) {
         throw Exception('Task title cannot be empty');
       }
       task.title = title;
